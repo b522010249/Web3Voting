@@ -1,0 +1,29 @@
+.admin-panel{
+    display: flex;
+    flex:1;
+    height: 90%;
+    flex-direction: column;
+  
+}
+.top-panel{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.Election-section{
+    padding: 20px;
+}
+.Canidates-section,.Voting-section{
+
+    padding: 20px;
+    width: 100%;
+}
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px; /* Set padding for all buttons */
+    border: none;
+    cursor: pointer;
+    margin-right: 5px; /* Add margin between buttons if needed */
+  }
