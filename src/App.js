@@ -1,17 +1,27 @@
+import React from 'react';
+import Navbar from './components/Navbar';
+import {BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css';
-import AdminPanel from './components/AdminPannel';
-import ElectionInformation from './components/ElectionInformation';
-import Footer from './components/Footer';
-import UserProfile from './components/UserProfile';
+import Home from './components/pages/Home'
+import About from './components/pages/About'
+import Vote from './components/pages/Vote';
+import SignUp from './components/pages/SignUp'
+
+
 
 function App() {
   return (
-    <div className="App" style={{flex: 1 }}>
-      {/* <ElectionInformation/> */}
-      {/* <UserProfile/> */}
-      <AdminPanel/>
-      <Footer/>
-    </div>
+    <>
+    <Router>
+      <Navbar />
+      <Switch>
+        <Route path='/' exact component={Home} />
+        <Route path='/about' component={About} />
+        <Route path='/vote' component={Vote} />
+        <Route path='/sign-up' component={SignUp} />
+      </Switch>
+      </Router>
+    </>
   );
 }
 
